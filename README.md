@@ -82,7 +82,7 @@ made to generate the HTML expected by Bootstrap while still generating the rich 
 
     <form accept-charset="UTF-8" action="/posts" class="formtastic post" id="new_post" method="post">
       <fieldset class="inputs">
-        <div class="string clearfix optional stringish" id="post_title_input">
+        <div class="string optional stringish" id="post_title_input">
           <label class="" for="post_title">Title</label>
           <div class="input">
             <input id="post_title" maxlength="255" name="post[title]" type="text" value="" />

@@ -6,7 +6,7 @@ module FormtasticBootstrap
         include Formtastic::Inputs::Base::Wrapping
 
         def generic_input_wrapping(&block)
-          clearfix_div_wrapping do
+          div_wrapping do
             label_html <<
             input_div_wrapping do
               yield
@@ -14,7 +14,7 @@ module FormtasticBootstrap
           end
         end
 
-        def clearfix_div_wrapping(&block)
+        def div_wrapping(&block)
           template.content_tag(:div, wrapper_html_options) do
             yield
           end
@@ -37,7 +37,6 @@ module FormtasticBootstrap
           opts[:class] ||= []
           opts[:class] = [opts[:class].to_s] unless opts[:class].is_a?(Array)
           opts[:class] << as
-          opts[:class] << "clearfix"
           # opts[:class] << "input"
           opts[:class] << "error" if errors?
           opts[:class] << "optional" if optional?

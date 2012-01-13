@@ -69,7 +69,6 @@ describe 'time input' do
       end
 
       it_should_have_input_wrapper_with_class("time")
-      it_should_have_input_wrapper_with_class(:clearfix)
       it_should_have_input_wrapper_with_class(:stringish)
       it_should_have_input_class_in_the_right_place
       it_should_have_input_wrapper_with_id("post_publish_at_input")
@@ -77,17 +76,17 @@ describe 'time input' do
       it_should_apply_error_logic_for_input_type(:time)
 
       it 'should have a legend and label with the label text inside the fieldset' do
-        output_buffer.should have_tag('form div.clearfix.time label', /Publish at/)
+        output_buffer.should have_tag('form div.time label', /Publish at/)
       end
 
       # TODO Is this right?
       it 'should (sort of) associate the label with the input' do
-        output_buffer.should have_tag('form div.clearfix.time label[@for="post_publish_at"]')
-        output_buffer.should have_tag('form div.clearfix.time div.input input[@id="post_publish_at[time]"]')
+        output_buffer.should have_tag('form div.time label[@for="post_publish_at"]')
+        output_buffer.should have_tag('form div.time div.input input[@id="post_publish_at[time]"]')
       end
 
       it 'should have an text input inside the div' do
-        output_buffer.should have_tag('form div.clearfix.time div.input input[@type="text"]')
+        output_buffer.should have_tag('form div.time div.input input[@type="text"]')
       end
 
       # it 'should have five labels for hour and minute' do

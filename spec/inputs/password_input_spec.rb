@@ -16,7 +16,6 @@ describe 'password input' do
   end
 
   it_should_have_input_wrapper_with_class(:password)
-  it_should_have_input_wrapper_with_class(:clearfix)
   it_should_have_input_wrapper_with_class(:stringish)
   it_should_have_input_class_in_the_right_place
   it_should_have_input_wrapper_with_id("post_title_input")
